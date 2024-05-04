@@ -7,19 +7,19 @@ class Main {
 
         while(menuActivo){
             opciones();
-            System.out.println("Ingrese su elección: ");
+            System.out.println("\nIngrese su elección: ");
             int seleccion = sc.nextInt();
             ejecutarSeleccion(seleccion);
         }
     }
 
     public static void opciones(){
-        System.out.println("OPCIONES DELA CALCULADORA:" + 
-        "1. SUMA " +
-        "2. RESTA " +
-        "3. MULTIPLICACION " +
-        "4. DIVISION " +
-        "5. MODULO "+
+        System.out.println("\nOPCIONES DELA CALCULADORA: \n" + 
+        "1. SUMA \n" +
+        "2. RESTA \n" +
+        "3. MULTIPLICACION \n" +
+        "4. DIVISION \n" +
+        "5. MODULO \n"+
         "6. SALIR");
     }
 
@@ -28,15 +28,15 @@ class Main {
         switch (x) {
             case 1: 
                 break;
-            case 2: 
-                break;
+            case 2: calculadora.restar();
+                break; 
             case 3: 
                 break;
             case 4: 
                 break;
             case 5: 
                 break;
-            case 6: calculadora.sumar(); 
+            case 6:  
                 break;
             
             default: System.out.println("El número igresado es incorrecto");

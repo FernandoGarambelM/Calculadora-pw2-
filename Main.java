@@ -26,7 +26,7 @@ class Main {
     public static void ejecutarSeleccion(int x){
         Calculator calculadora = new Calculator();
         switch (x) {
-            case 1: 
+            case 1: calculadora.sumar();
                 break;
             case 2: calculadora.restar();
                 break; 
@@ -36,7 +36,7 @@ class Main {
                 break;
             case 5: 
                 break;
-            case 6:  
+            case 6: 
                 break;
             
             default: System.out.println("El número igresado es incorrecto");

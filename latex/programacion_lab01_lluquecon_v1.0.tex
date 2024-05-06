@@ -1,0 +1,575 @@
+%package list
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{array}
+%\usepackage{multicol}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{svg}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinestyle{ascii-tree}{
+    literate={├}{|}1 {─}{--}1 {└}{+}1 
+  }
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+%\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\itemEmail}{lluquecon@unsa.edu.pe}
+\newcommand{\itemStudent}{Luis Guillermo Luque Condori}
+\newcommand{\itemCourse}{Laboratorio de Programación}
+\newcommand{\itemCourseCode}{20233478}
+\newcommand{\itemSemester}{II}
+\newcommand{\itemUniversity}{Universidad Nacional de San Agustín de Arequipa}
+\newcommand{\itemFaculty}{Facultad de Ingeniería de Producción y Servicios}
+\newcommand{\itemDepartment}{Departamento Académico de Ingeniería de Sistemas e Informática}
+\newcommand{\itemSchool}{Escuela Profesional de Ingeniería de Sistemas}
+\newcommand{\itemAcademic}{2023 - B}
+\newcommand{\itemInput}{Del 18 Agosto 2023}
+\newcommand{\itemOutput}{Al 20 Agosto 2023}
+\newcommand{\itemPracticeNumber}{01}
+\newcommand{\itemTheme}{Git y GitHub}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{img/logo_episunsa.png}}}
+\fancyhead[C]{\fontsize{7}{7}\selectfont	\itemUniversity \\ \itemFaculty \\ \itemDepartment \\ \itemSchool \\ \textbf{\itemCourse}}
+\fancyhead[R]{\raisebox{-0.2\height}{\includegraphics[width=1.2cm]{img/logo_abet}}}
+\fancyfoot[L]{Estudiante Luis Luque Condori}
+\fancyfoot[C]{\itemCourse}
+\fancyfoot[R]{Página \thepage}
+
+% para el codigo fuente
+\usepackage{listings}
+\usepackage{color, colortbl}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{tablebackground}{rgb}{0.8, 0, 0}
+
+\lstset{frame=tb,
+	language=bash,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	backgroundcolor= \color{codebackground},
+}
+
+\begin{document}
+	
+	\vspace*{10px}
+	
+	\begin{center}	
+		\fontsize{17}{17} \textbf{ Informe de Laboratorio \itemPracticeNumber}
+	\end{center}
+	\centerline{\textbf{\Large Tema: \itemTheme}}
+	%\vspace*{0.5cm}	
+
+	\begin{flushright}
+		\begin{tabular}{|M{2.5cm}|N|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Nota}  \\
+			\hline 
+			     \\[30pt]
+			\hline 			
+		\end{tabular}
+	\end{flushright}	
+
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white} \textbf{Estudiante} & \color{white}\textbf{Escuela}  & \color{white}\textbf{Asignatura}   \\
+			\hline 
+			{\itemStudent \par \itemEmail} & \itemSchool & {\itemCourse \par Semestre: \itemSemester \par Código: \itemCourseCode}     \\
+			\hline 			
+		\end{tabular}
+	\end{table}		
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Laboratorio} & \color{white}\textbf{Tema}  & \color{white}\textbf{Duración}   \\
+			\hline 
+			\itemPracticeNumber & \itemTheme & 04 horas   \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[H]
+		\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+			\hline 
+			\rowcolor{tablebackground}
+			\color{white}\textbf{Semestre académico} & \color{white}\textbf{Fecha de inicio}  & \color{white}\textbf{Fecha de entrega}   \\
+			\hline 
+			\itemAcademic & \itemInput &  \itemOutput  \\
+			\hline 
+		\end{tabular}
+	\end{table}
+	
+	\section{Tarea}
+	\begin{itemize}		
+		\item Actividad 1: escribir un programa donde se creen 5 soldados considerando sólo su nombre. Ingresar sus datos y
+		después mostrarlos.
+		Restricción: se realizará considerando sólo los conocimientos que se tienen de FP1 y sin utilizar arreglos estándar,
+		sólo usar variables simples.
+		\item Actividad 2: escribir un programa donde se creen 5 soldados considerando su nombre y nivel de vida. Ingresar sus
+		datos y después mostrarlos.
+		Restricción: se realizará considerando sólo los conocimientos que se tienen de FP1 y sin utilizar arreglos estándar,
+		sólo usar variables simples.
+		\item Actividad 3: escribir un programa donde se creen 5 soldados considerando sólo su nombre. Ingresar sus datos y
+		después mostrarlos.
+		Restricción: aplicar arreglos estándar.
+		\item Actividad 4: escribir un programa donde se creen 5 soldados considerando su nombre y nivel de vida. Ingresar sus
+		datos y después mostrarlos.
+		Restricción: aplicar arreglos estándar. (Todavía no aplicar arreglo de objetos)
+		\item Actividad 5: escribir un programa donde se creen 2 ejércitos, cada uno con un número aleatorio de soldados entre
+		1 y 5, considerando sólo su nombre. Sus datos se inicializan automáticamente con nombres tales como “Soldado0”,
+		“Soldado1”, etc. Luego de crear los 2 ejércitos se deben mostrar los datos de todos los soldados de ambos ejércitos
+		e indicar qué ejército fue el ganador.
+		Restricción: aplicar arreglos estándar y métodos para inicializar los ejércitos, mostrar ejército y mostrar ejército
+		ganador. La métrica a aplicar para indicar el ganador es el mayor número de soldados de cada ejército, puede
+		haber empates. (Todavía no aplicar arreglo de objetos)
+		\item Utilizar Git para evidenciar su trabajo.
+		\item Enviar trabajo al profesor en un repositorio GitHub Privado, dándole permisos como colaborador.
+	\end{itemize}
+		
+	\section{Equipos, materiales y temas utilizados}
+	\begin{itemize}
+		\item Sistema operativo de 64 bits, procesador basado en x64.
+		\item Visual Studio Code.
+		\item Latex. 
+		\item git version 2.41.0.windows.1
+		\item Cuenta en GitHub con el correo institucional.
+		\item Arreglos Estándar.	
+	\end{itemize}
+	
+	\section{URL de Repositorio Github}
+	\begin{itemize}
+		\item URL del Repositorio GitHub para clonar o recuperar.
+		\item \url{https://github.com/Choflis/fp2-23b.git}
+		\item URL para el laboratorio 01 en el Repositorio GitHub.
+		\item \url{https://github.com/Choflis/fp2-23b/tree/main/fase01/lab01}
+	\end{itemize}
+	
+	\section{Actividades con el repositorio GitHub}
+	
+	\subsection{Creando e inicializando repositorio GitHub}
+	\begin{itemize}	
+		\item Como es el primer laboratorio se creo el repositorio GitHub.
+		\item Se realizaron los siguientes comandos en la computadora:
+	\end{itemize}	
+		
+	\begin{lstlisting}[language=bash,caption={Creando directorio de trabajo}][H]
+		1. mkdir lluquecon
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={Dirijíéndonos al directorio de trabajo}][H]
+		1. cd lluquecon
+	\end{lstlisting}	
+	\begin{lstlisting}[language=bash,caption={Creando directorio para repositorio GitHub}][H]
+		1. mkdir fp2-23b
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={Inicializando directorio para repositorio GitHub}][H]
+		1. pwd
+
+		2. mkdir lluquecon
+
+		3. CONTROL + L
+
+		4. cd lluquecon
+
+		5. mkdir fp2-23b
+
+		6. cd fp2-23b
+
+		7. git init
+
+		8. ls -la
+		
+		9. git config --global user.name "Luis Guillermo Luque Condori"
+
+		10. git config --global user.email lluquecon@unsa.edu.pe
+
+		11. git config --list
+
+		12. mkdir fase01
+
+		13. mkdir fase02
+
+		14. mkdir fase03
+
+		15. cd fase01
+
+		16. mkdir lab01
+
+		17. cd lab01
+
+		18. vim VideoJuego.java
+
+		19. cd ..
+
+		20. vim .gitignore
+
+	\end{lstlisting}
+	
+	\subsection{Commits}
+	\begin{itemize}	
+		\item Se creo el archivo \textbf{.gitignore} para no considerar los archivos \textbf{*.class} que son innecesarios hacer seguimiento.
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Creando .gitignore}][H]
+		$ vim lab01/.gitignore
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={lab01/.gitignore}][H]
+		*.class
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={Commit: Creando .gitignore para archivos *.class}][H]
+		$ git add .
+		$ git commit -m "Creando .gitignore para archivos *.class"			
+		$ git push -u origin main
+	\end{lstlisting}
+	
+	\begin{itemize}	
+		\item En el primer commit creamos gitignore para que evite los archivos tipo class, ademas agregamos un archivo "VideoJuego.java" para verificar la funcionalidad de gitignore.
+	\end{itemize}	
+	
+	
+	\clearpage
+	
+	\lstinputlisting[language=Java, caption={Ejercicio01.java},numbers=left,]{src/Ejercicio01.java}
+	
+	\begin{itemize}
+		\item La primera actividad nos pide que creemos 5 soldados sólo considerando su nombre, donde sólo podemos usar variables simples.
+		\item Primero importamos la clase Scanner para poder nombrar a cada uno de los cinco soldados.
+		\item Por último imprimimos para que nos muestre el nombre de los soldados.
+		\item Solo se uso el commit solo una vez para poder guardar el avance de la tarea.
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio01}][H]
+		Ingrese el nombre de los soldados: 
+			Pedro
+			Juan 
+			Luis
+			Pancho
+			Juarez
+			Nombre del soldado: Pedro
+			Nombre del soldado: Juan
+			Nombre del soldado: Luis
+			Nombre del soldado: Pancho
+			Nombre del soldado: Juarez
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={Commit: Ejercicio01(Primer commit para poder observar en el git)}][H]
+		- git add .
+		- git commit -m "Ejercicio01(Primer commit para poder observar en el git)"			
+		- git push -u origin main
+	\end{lstlisting}
+		\clearpage
+
+	\lstinputlisting[language=Java, caption={Ejercicio02.java},numbers=left,]{src/Ejercicio02.java}
+		\begin{itemize}
+			\item Para el Ejercicio02 nos pedía crear soldados y como datos tener su nombre y su nivel de vida.
+			\item Primero usamo la clase Scanner para poder nombrar a cada soldado.
+			\item Por último imprimimos pero le ponemos su nivel de vida.
+			\item "Pude realizar que el usuario ponga el nivel de vida, pero puse el nivel de vida predeterminado para cada soldado"
+			\item Solo se uso el commit solo una vez para poder guardar el avance de la tarea.
+		\end{itemize}
+		\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio02}][H]
+				Ingrese el nombre de los soldados: 
+				Luis
+				Pancho
+				Ronald
+				Rodrigo
+				Victor
+				Nombre del soldado: Luis
+				Vida: 15
+				Nombre del soldado: Pancho
+				Vida: 20
+				Nombre del soldado: Ronald
+				vida: 10
+				Nombre del soldado: Rodrigo
+				vida: 5
+				Nombre del soldado: Victor
+				vida: 13
+		\end{lstlisting}
+		\begin{lstlisting}[language=bash,caption={Commit: Ejercicio02(Aun no he usado arreglos)}][H]
+			- git add .
+			- git commit -m "Ejercicio02(Aun no he usado arreglos)"			
+			- git push -u origin main
+		\end{lstlisting}
+	\lstinputlisting[language=Java, caption={Ejercicio03.java},numbers=left,]{src/Ejercicio03.java}	
+	\begin{itemize}
+		\item En el Ejercicio03 es la versión mejorada del Ejercicio01, ya que ahora usamos arreglos estadar.
+		\item Primero creamos el arreglo de string llamado soldados, esto para pedir el nombre del soldado.
+		\item Después creamos un ciclo for para poder insertar los nombres de cada uno de ellos.
+		\item Por último creamos un ciclo for para imprimir el arreglo.
+		\item Solo se ralizo un commit para poder guardar el avance de ese día, en el commit dije que no podía usar arreglo de clases.
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio03}][H]
+		ingrese el nombre del soldado 1
+		Luis
+		ingrese el nombre del soldado 2
+		Pedro
+		ingrese el nombre del soldado 3
+		Roberto
+		ingrese el nombre del soldado 4
+		Saul
+		ingrese el nombre del soldado 5
+		Juan
+		El nombre de los Soldados son: 
+		Soldado N1:
+		Luis
+		Soldado N2:
+		Pedro
+		Soldado N3:
+		Roberto
+		Soldado N4:
+		Saul
+		Soldado N5:
+		Juan
+\end{lstlisting}
+
+\clearpage
+
+\begin{lstlisting}[language=bash,caption={Commit: Ejercicio03(Empeze a usar arreglos pero no aun clases)}][H]
+	- git add .
+	- git commit -m "Ejercicio03(Empeze a usar arreglos pero no aun clases)"			
+	- git push -u origin main
+\end{lstlisting}
+
+\lstinputlisting[language=Java, caption={Ejercicio04.java},numbers=left,]{src/Ejercicio04.java}
+\begin{itemize}
+	\item Para el Ejercicio04 use métodos.
+	\item El primer método pide el nombre del soldado.
+	\item El segundo método pide la vida del soldado.
+	\item El tercer método imprime el nombre y la vida del soldado.
+	\item En el commit enviado puse una observación personal sobre el uso de métodos y el avance del día.
+\end{itemize}
+\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio04}][H]
+	Ingrese los datos de los soldados: 
+	Nombre del soldado Numero. 1
+	2
+	Nombre del soldado Numero. 2
+	Luis
+	Nombre del soldado Numero. 3
+	Pedro
+	Nombre del soldado Numero. 4
+	Fan
+	Nombre del soldado Numero. 5
+	Lu
+	Ingrese la vida del soldado Número. 1
+	5
+	Ingrese la vida del soldado Número. 2
+	5
+	Ingrese la vida del soldado Número. 3
+	5
+	Ingrese la vida del soldado Número. 4
+	55
+	Ingrese la vida del soldado Número. 5
+	5
+	Los datos de los soldados son: 
+	Nombre del soldado Número.1:
+	2
+	Vida del soldado Nuemro.1:
+	5
+	Nombre del soldado Número.2:
+	Luis
+	Vida del soldado Nuemro.2:
+	5
+	Nombre del soldado Número.3:
+	Pedro
+	Vida del soldado Nuemro.3:
+	5
+	Nombre del soldado Número.4:
+	Fan
+	Vida del soldado Nuemro.4:
+	55
+	Nombre del soldado Número.5:
+	Lu
+	Vida del soldado Nuemro.5:
+	5
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash,caption={Commit: Ejercicio04(Aun se me dificulta usar metodos pero esta vez pude utilizarlos, aun no use arreglo de objetos, cree intento.java para verificar si esta bien la clase intento(aun no entiendo bien como se hace y el porque))}][H]
+	- git add .
+	- git commit -m "Ejercicio04(Aun se me dificulta usar metodos pero esta vez pude utilizarlos, aun no use arreglo de objetos, cree intento.java para verificar si esta bien la clase intento(aun no entiendo bien como se hace y el porque))"			
+	- git push -u origin main
+\end{lstlisting}
+	
+\lstinputlisting[language=Java, caption={Ejercicio05.java},numbers=left,]{src/Ejercicio05.java}
+\clearpage
+
+\begin{itemize}
+	\item En este Ejercicio usamos de todo lo aprendido en los otros problemas, usando mejores métodos y haciendo que nos de un ganador.
+	\item Pudo ser mejor, ya que solo gana el que tenga mas soldados.
+\end{itemize}
+
+\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio03}][H]
+	Ingrese el nombre del Jugador 1: 
+	Luis
+	Ingrese el nombre del Jugador 2 : 
+	Lucho
+	Ingrese el número de soldados del jugador uno: 
+	Solo se permite hasta 5 soldados en la batalla
+	5
+	Ingrese el número de soldados del jugador dos: 
+	4
+	soldados jugador 1
+	Soldado01
+	Soldado02
+	Soldado03
+	Soldado04
+	Soldado05
+	Soldados jugador 2
+	Soldado01
+	Soldado02
+	Soldado03
+	Soldado04
+	ganó: Luis
+\end{lstlisting}
+\begin{lstlisting}[language=bash,caption={Commit: Aun puede mejorar usando mejores metodos para comprobar mas cosas del Ejercicio05 pero por ahora cumple la funsion de tener un ganador, ademas estoy confiando en el usuario}][H]
+	- git add .
+	- git commit -m "Aun puede mejorar usando mejores metodos para comprobar mas cosas del Ejercicio05 pero por ahora cumple la funsion de tener un ganador, ademas estoy confiando en el usuario"			
+	- git push -u origin main
+\end{lstlisting}
+
+	
+	\section{\textcolor{red}{Rúbricas}}
+	
+	\subsection{\textcolor{red}{Entregable Informe}}
+	\begin{table}[H]
+		\caption{Tipo de Informe}
+		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+		{\renewcommand{\arraystretch}{1.5}% for the vertical padding
+		\begin{tabular}{|p{3cm}|p{12cm}|}
+			\hline
+			\multicolumn{2}{|c|}{\textbf{\textcolor{red}{Informe}}}  \\
+			\hline 
+			\textbf{\textcolor{red}{Latex}} & \textcolor{blue}{El informe está en formato PDF desde Latex,  con un formato limpio (buena presentación) y facil de leer.}   \\ 
+			\hline 
+			
+			
+		\end{tabular}
+	}
+	\end{table}
+	
+	\clearpage
+	
+	\subsection{\textcolor{red}{Rúbrica para el contenido del Informe y demostración}}
+	\begin{itemize}			
+		\item El alumno debe marcar o dejar en blanco en celdas de la columna \textbf{Checklist} si cumplio con el ítem correspondiente.
+		\item Si un alumno supera la fecha de entrega,  su calificación será sobre la nota mínima aprobada, siempre y cuando cumpla con todos lo items.
+		\item El alumno debe autocalificarse en la columna \textbf{Estudiante} de acuerdo a la siguiente tabla:
+	
+		\begin{table}[ht]
+			\caption{Niveles de desempeño}
+			\begin{center}
+			\begin{tabular}{ccccc}
+    			\hline
+    			 & \multicolumn{4}{c}{Nivel}\\
+    			\cline{1-5}
+    			\textbf{Puntos} & Insatisfactorio 25\%& En Proceso 50\% & Satisfactorio 75\% & Sobresaliente 100\%\\
+    			\textbf{2.0}&0.5&1.0&1.5&2.0\\
+    			\textbf{4.0}&1.0&2.0&3.0&4.0\\
+    		\hline
+			\end{tabular}
+		\end{center}
+	\end{table}	
+	
+	\end{itemize}
+	
+	\begin{table}[H]
+		\caption{Rúbrica para contenido del Informe y demostración}
+		\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+		{\renewcommand{\arraystretch}{1.5}% for the vertical padding
+		%\begin{center}
+		\begin{tabular}{|p{2.7cm}|p{7cm}|x{1.3cm}|p{1.2cm}|p{1.5cm}|p{1.1cm}|}
+			\hline
+    		\multicolumn{2}{|c|}{Contenido y demostración} & Puntos & Checklist & Estudiante & Profesor\\
+			\hline
+			\textbf{1. GitHub} & Hay enlace URL activo del directorio para el  laboratorio hacia su repositorio GitHub con código fuente terminado y fácil de revisar. &2 &X &2 & \\ 
+			\hline
+			\textbf{2. Commits} &  Hay capturas de pantalla de los commits más importantes con sus explicaciones detalladas. (El profesor puede preguntar para refrendar calificación). &4 &X &2 & \\ 
+			\hline 
+			\textbf{3. Código fuente} &  Hay porciones de código fuente importantes con numeración y explicaciones detalladas de sus funciones. &2 &X &1 & \\ 
+			\hline 
+			\textbf{4. Ejecución} & Se incluyen ejecuciones/pruebas del código fuente  explicadas gradualmente. &2 &X &2 & \\ 
+			\hline			
+			\textbf{5. Pregunta} & Se responde con completitud a la pregunta formulada en la tarea.  (El profesor puede preguntar para refrendar calificación).  &2 &X &2 & \\ 
+			\hline	
+			\textbf{6. Fechas} & Las fechas de modificación del código fuente estan dentro de los plazos de fecha de entrega establecidos. &2 &X &2 & \\ 
+			\hline 
+			\textbf{7. Ortografía} & El documento no muestra errores ortográficos. &2 &X &1 & \\ 
+			\hline 
+			\textbf{8. Madurez} & El Informe muestra de manera general una evolución de la madurez del código fuente,  explicaciones puntuales pero precisas y un acabado impecable.   (El profesor puede preguntar para refrendar calificación).  &4 &X &1 & \\ 
+			\hline
+			\multicolumn{2}{|c|}{\textbf{Total}} &20 & &13 & \\ 
+			\hline
+		\end{tabular}
+		%\end{center}
+		%\label{tab:multicol}
+		}
+	\end{table}
+	
+\clearpage
+
+\section{Referencias}
+\begin{itemize}			
+	\item \url{https://www.w3schools.com/java/default.asp}
+	\item \url{https://www.geeksforgeeks.org/insertion-sort/}
+\end{itemize}	
+	
+%\clearpage
+%\bibliographystyle{apalike}
+%\bibliographystyle{IEEEtranN}
+%\bibliography{bibliography}
+			
+\end{document}

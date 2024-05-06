@@ -33,7 +33,8 @@ public class Calculator {
     
 
     //MULTIPLICACION
-    int mul(int a, int b){ return 0; }
+    int mul(int a, int b){ 
+        return 0; }
 
     //DIVIDIR
     public static double dividirNumeros(double dividendo, double divisor) {

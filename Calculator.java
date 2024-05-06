@@ -36,7 +36,14 @@ public class Calculator {
     int mul(int a, int b){ return 0; }
 
     //DIVIDIR
-    int div(int a, int b){ return 0; }
+    public static double dividirNumeros(double dividendo, double divisor) {
+        if (divisor == 0) {
+            System.out.println("Error: No se puede dividir por cero.");
+            return Double.NaN; // Devuelve NaN (Not a Number) si se intenta dividir por cero
+        }
+        
+        return dividendo / divisor;
+    }
 
     //MODULO
     int mod(int a, int b){ return 0; }

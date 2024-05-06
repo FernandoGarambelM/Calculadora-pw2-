@@ -30,11 +30,11 @@ class Main {
                 break;
             case 2: calculadora.restar();
                 break; 
-            case 3: 
+            case 3: calculadora.multiplicar();
                 break;
             case 4: 
                 break;
-            case 5: 
+            case 5: calculadora.modulo();
                 break;
             case 6: 
                 break;

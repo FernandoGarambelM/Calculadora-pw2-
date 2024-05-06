@@ -34,7 +34,17 @@ public class Calculator {
 
     //MULTIPLICACION
     int mul(int a, int b){ 
-        return 0; }
+        int resultado = a * b;
+        return resultado; 
+    }
+
+    public void multiplicar(){
+        System.out.println("Ingrese los numeros: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int resultado = mul(a, b);
+        System.out.println("El resultado de la operacion es: " + resultado);
+    }
 
     //DIVIDIR
     public static double dividirNumeros(double dividendo, double divisor) {
@@ -47,6 +57,15 @@ public class Calculator {
     }
 
     //MODULO
-    int mod(int a, int b){ return 0; }
+    int mod(int a, int b){
+        int resultado = a % b;
+        return resultado; 
+    }
+    public void modulo(){
+        System.out.println("Ingrese los numeros: ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("El resultado de la operacion es: " + mod(a, b));
+    }
 
 }

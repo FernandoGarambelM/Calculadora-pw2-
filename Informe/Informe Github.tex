@@ -186,10 +186,10 @@
 		\item URL para el video flipgrid.
 		\item \url{Url de flipgrid}	
 	\end{itemize}
-	\section{Actividades con el repositorio GitHub}
-		\subsection{Capturas de pantalla de la cuenta y la version}
+	\clearpage
+	\section{Capturas de pantalla de la cuenta y la versionb}
+		\subsection{Captura de Fernando Miguel Garambel Marín}
 	\begin{itemize}
-		\item Captura de Fernando Miguel Garambel Marín
 		\item Version
 	\end{itemize}
 	\begin{figure}[H]
@@ -199,6 +199,9 @@
 		%\label{img:mot2}
 		%\caption{Product backlog.}
 	\end{figure}
+	\begin{itemize}
+		\item Cuenta creada
+	\end{itemize}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth,keepaspectratio]{img/FernandoCuenta.PNG}
@@ -206,12 +209,9 @@
 		%\label{img:mot2}
 		%\caption{Product backlog.}
 	\end{figure}
-	\begin{itemize}
-		\item Cuenta creada
-	\end{itemize}
 	\clearpage
+	\subsection{Captura de Jeans Anthony Ajra Huacso}
 	\begin{itemize}
-		\item Captura de Jeans Anthony Ajra Huacso
 		\item Version
 	\end{itemize}
 	\begin{figure}[H]
@@ -231,9 +231,34 @@
 		%\label{img:mot2}
 		%\caption{Product backlog.}
 	\end{figure}
+	\clearpage
 \section{Calculadora en Java}
 	\subsection{Clase Calculator}
+	\lstinputlisting[language=Java, caption={Código de Calculator},numbers=left,]{src/Calculator.java}
+	\begin{itemize}
+		\item  A continuación se explicaran los métodos utilizados en Calculator.
+	\end{itemize}
 	\subsection{Método add}
+	\begin{lstlisting}[language=bash,caption={Código del método add}][H]
+		int add(int a, int b){
+        		int resultado = a + b;
+        		return resultado;
+    		}	
+	\end{lstlisting}
+	\begin{itemize}
+		\item  Para utilizar este método se creó el método sumar que es el que interactua con el usuario
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Código del método sumar}][H]
+	public void sumar(){
+        System.out.println("Ingrese los dos numeros a sumar: ");
+        System.out.print("Numero 1: ");
+        int a = sc.nextInt();
+        System.out.print("Numero 2: ");
+        int b = sc.nextInt();
+        int resultado = add(a, b);
+        System.out.println("El resultado de la suma es: " + resultado + "\n");
+    }	
+	\end{lstlisting}
 	\subsection{Método resta}
 	\subsection{Método multiplicación}
 	\subsection{Método módulo}

@@ -158,20 +158,33 @@
 		\end{tabular}
 	\end{table}
 	
-	\section{Actividades}
+	\section{Tarea}
 	\begin{itemize}		
-		\item Cree una cuenta de usuario en github
-		\item Configure su cuenta de estudiante (https://education.github.com/pack).
+		\item Actividad 1: escribir un programa donde se creen 5 soldados considerando sólo su nombre. Ingresar sus datos y
+		después mostrarlos.
+		Restricción: se realizará considerando sólo los conocimientos que se tienen de FP1 y sin utilizar arreglos estándar,
+		sólo usar variables simples.
+		\item Actividad 2: escribir un programa donde se creen 5 soldados considerando su nombre y nivel de vida. Ingresar sus
+		datos y después mostrarlos.
+		Restricción: se realizará considerando sólo los conocimientos que se tienen de FP1 y sin utilizar arreglos estándar,
+		sólo usar variables simples.
+		\item Actividad 3: escribir un programa donde se creen 5 soldados considerando sólo su nombre. Ingresar sus datos y
+		después mostrarlos.
+		Restricción: aplicar arreglos estándar.
+		\item Actividad 4: escribir un programa donde se creen 5 soldados considerando su nombre y nivel de vida. Ingresar sus
+		datos y después mostrarlos.
+		Restricción: aplicar arreglos estándar. (Todavía no aplicar arreglo de objetos)
+		\item Actividad 5: escribir un programa donde se creen 2 ejércitos, cada uno con un número aleatorio de soldados entre
+		1 y 5, considerando sólo su nombre. Sus datos se inicializan automáticamente con nombres tales como “Soldado0”,
+		“Soldado1”, etc. Luego de crear los 2 ejércitos se deben mostrar los datos de todos los soldados de ambos ejércitos
+		e indicar qué ejército fue el ganador.
+		Restricción: aplicar arreglos estándar y métodos para inicializar los ejércitos, mostrar ejército y mostrar ejército
+		ganador. La métrica a aplicar para indicar el ganador es el mayor número de soldados de cada ejército, puede
+		haber empates. (Todavía no aplicar arreglo de objetos)
+		\item Utilizar Git para evidenciar su trabajo.
+		\item Enviar trabajo al profesor en un repositorio GitHub Privado, dándole permisos como colaborador.
 	\end{itemize}
-\section{Ejercicios Propuestos}
-	\begin{itemize}		
-		\item Forme grupos de 3 a 5 personas
-		\item Un integrante del grupo deberá crear el proyecto principal, con el nombre de su grupo, con la plantilla base
-		\item Comparta el proyecto con sus compañeros de grupo y asigne uno o dos  métodos distintos a cada integrante del grupo.
-		\item Los integrantes del grupo deberán hacer clone, push y pull según corresponda, de modo que el repositorio contenga la solución final.
-		\item Reportar al profesor que logró culminar la tarea. La tarea debe ser compartida con el profesor (CarloCorralesD) y entregada usando el mismo url que se usó para clonar el repositorio.
-	\end{itemize}
-
+		
 	\section{Equipos, materiales y temas utilizados}
 	\begin{itemize}
 		\item Sistema operativo de 64 bits, procesador basado en x64.
@@ -181,13 +194,15 @@
 		\item Cuenta en GitHub con el correo institucional.
 		\item Arreglos Estándar.	
 	\end{itemize}
-	\section{URL Github, Video}
+	
+	\section{URL de Repositorio Github}
 	\begin{itemize}
 		\item URL del Repositorio GitHub para clonar o recuperar.
-		\item \url{https://github.com/FernandoGarambelM/Calculadora-pw2-.git}
-		\item URL para el video flipgrid.
-		\item \url{Url de flipgrid}	
+		\item \url{https://github.com/Choflis/fp2-23b.git}
+		\item URL para el laboratorio 01 en el Repositorio GitHub.
+		\item \url{https://github.com/Choflis/fp2-23b/tree/main/fase01/lab01}
 	\end{itemize}
+	
 	\section{Actividades con el repositorio GitHub}
 	
 	\subsection{Creando e inicializando repositorio GitHub}
@@ -263,13 +278,209 @@
 		$ git commit -m "Creando .gitignore para archivos *.class"			
 		$ git push -u origin main
 	\end{lstlisting}
-\section{1era sección}
-\section{2da sección}
-\section{3era sección}
+	
+	\begin{itemize}	
+		\item En el primer commit creamos gitignore para que evite los archivos tipo class, ademas agregamos un archivo "VideoJuego.java" para verificar la funcionalidad de gitignore.
+	\end{itemize}	
 	
 	
+	\clearpage
 	
+	\lstinputlisting[language=Java, caption={Ejercicio01.java},numbers=left,]{src/Ejercicio01.java}
 	
+	\begin{itemize}
+		\item La primera actividad nos pide que creemos 5 soldados sólo considerando su nombre, donde sólo podemos usar variables simples.
+		\item Primero importamos la clase Scanner para poder nombrar a cada uno de los cinco soldados.
+		\item Por último imprimimos para que nos muestre el nombre de los soldados.
+		\item Solo se uso el commit solo una vez para poder guardar el avance de la tarea.
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio01}][H]
+		Ingrese el nombre de los soldados: 
+			Pedro
+			Juan 
+			Luis
+			Pancho
+			Juarez
+			Nombre del soldado: Pedro
+			Nombre del soldado: Juan
+			Nombre del soldado: Luis
+			Nombre del soldado: Pancho
+			Nombre del soldado: Juarez
+	\end{lstlisting}
+	\begin{lstlisting}[language=bash,caption={Commit: Ejercicio01(Primer commit para poder observar en el git)}][H]
+		- git add .
+		- git commit -m "Ejercicio01(Primer commit para poder observar en el git)"			
+		- git push -u origin main
+	\end{lstlisting}
+		\clearpage
+
+	\lstinputlisting[language=Java, caption={Ejercicio02.java},numbers=left,]{src/Ejercicio02.java}
+		\begin{itemize}
+			\item Para el Ejercicio02 nos pedía crear soldados y como datos tener su nombre y su nivel de vida.
+			\item Primero usamo la clase Scanner para poder nombrar a cada soldado.
+			\item Por último imprimimos pero le ponemos su nivel de vida.
+			\item "Pude realizar que el usuario ponga el nivel de vida, pero puse el nivel de vida predeterminado para cada soldado"
+			\item Solo se uso el commit solo una vez para poder guardar el avance de la tarea.
+		\end{itemize}
+		\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio02}][H]
+				Ingrese el nombre de los soldados: 
+				Luis
+				Pancho
+				Ronald
+				Rodrigo
+				Victor
+				Nombre del soldado: Luis
+				Vida: 15
+				Nombre del soldado: Pancho
+				Vida: 20
+				Nombre del soldado: Ronald
+				vida: 10
+				Nombre del soldado: Rodrigo
+				vida: 5
+				Nombre del soldado: Victor
+				vida: 13
+		\end{lstlisting}
+		\begin{lstlisting}[language=bash,caption={Commit: Ejercicio02(Aun no he usado arreglos)}][H]
+			- git add .
+			- git commit -m "Ejercicio02(Aun no he usado arreglos)"			
+			- git push -u origin main
+		\end{lstlisting}
+	\lstinputlisting[language=Java, caption={Ejercicio03.java},numbers=left,]{src/Ejercicio03.java}	
+	\begin{itemize}
+		\item En el Ejercicio03 es la versión mejorada del Ejercicio01, ya que ahora usamos arreglos estadar.
+		\item Primero creamos el arreglo de string llamado soldados, esto para pedir el nombre del soldado.
+		\item Después creamos un ciclo for para poder insertar los nombres de cada uno de ellos.
+		\item Por último creamos un ciclo for para imprimir el arreglo.
+		\item Solo se ralizo un commit para poder guardar el avance de ese día, en el commit dije que no podía usar arreglo de clases.
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio03}][H]
+		ingrese el nombre del soldado 1
+		Luis
+		ingrese el nombre del soldado 2
+		Pedro
+		ingrese el nombre del soldado 3
+		Roberto
+		ingrese el nombre del soldado 4
+		Saul
+		ingrese el nombre del soldado 5
+		Juan
+		El nombre de los Soldados son: 
+		Soldado N1:
+		Luis
+		Soldado N2:
+		Pedro
+		Soldado N3:
+		Roberto
+		Soldado N4:
+		Saul
+		Soldado N5:
+		Juan
+\end{lstlisting}
+
+\clearpage
+
+\begin{lstlisting}[language=bash,caption={Commit: Ejercicio03(Empeze a usar arreglos pero no aun clases)}][H]
+	- git add .
+	- git commit -m "Ejercicio03(Empeze a usar arreglos pero no aun clases)"			
+	- git push -u origin main
+\end{lstlisting}
+
+\lstinputlisting[language=Java, caption={Ejercicio04.java},numbers=left,]{src/Ejercicio04.java}
+\begin{itemize}
+	\item Para el Ejercicio04 use métodos.
+	\item El primer método pide el nombre del soldado.
+	\item El segundo método pide la vida del soldado.
+	\item El tercer método imprime el nombre y la vida del soldado.
+	\item En el commit enviado puse una observación personal sobre el uso de métodos y el avance del día.
+\end{itemize}
+\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio04}][H]
+	Ingrese los datos de los soldados: 
+	Nombre del soldado Numero. 1
+	2
+	Nombre del soldado Numero. 2
+	Luis
+	Nombre del soldado Numero. 3
+	Pedro
+	Nombre del soldado Numero. 4
+	Fan
+	Nombre del soldado Numero. 5
+	Lu
+	Ingrese la vida del soldado Número. 1
+	5
+	Ingrese la vida del soldado Número. 2
+	5
+	Ingrese la vida del soldado Número. 3
+	5
+	Ingrese la vida del soldado Número. 4
+	55
+	Ingrese la vida del soldado Número. 5
+	5
+	Los datos de los soldados son: 
+	Nombre del soldado Número.1:
+	2
+	Vida del soldado Nuemro.1:
+	5
+	Nombre del soldado Número.2:
+	Luis
+	Vida del soldado Nuemro.2:
+	5
+	Nombre del soldado Número.3:
+	Pedro
+	Vida del soldado Nuemro.3:
+	5
+	Nombre del soldado Número.4:
+	Fan
+	Vida del soldado Nuemro.4:
+	55
+	Nombre del soldado Número.5:
+	Lu
+	Vida del soldado Nuemro.5:
+	5
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash,caption={Commit: Ejercicio04(Aun se me dificulta usar metodos pero esta vez pude utilizarlos, aun no use arreglo de objetos, cree intento.java para verificar si esta bien la clase intento(aun no entiendo bien como se hace y el porque))}][H]
+	- git add .
+	- git commit -m "Ejercicio04(Aun se me dificulta usar metodos pero esta vez pude utilizarlos, aun no use arreglo de objetos, cree intento.java para verificar si esta bien la clase intento(aun no entiendo bien como se hace y el porque))"			
+	- git push -u origin main
+\end{lstlisting}
+	
+\lstinputlisting[language=Java, caption={Ejercicio05.java},numbers=left,]{src/Ejercicio05.java}
+\clearpage
+
+\begin{itemize}
+	\item En este Ejercicio usamos de todo lo aprendido en los otros problemas, usando mejores métodos y haciendo que nos de un ganador.
+	\item Pudo ser mejor, ya que solo gana el que tenga mas soldados.
+\end{itemize}
+
+\begin{lstlisting}[language=bash,caption={Ejecución del Ejercicio03}][H]
+	Ingrese el nombre del Jugador 1: 
+	Luis
+	Ingrese el nombre del Jugador 2 : 
+	Lucho
+	Ingrese el número de soldados del jugador uno: 
+	Solo se permite hasta 5 soldados en la batalla
+	5
+	Ingrese el número de soldados del jugador dos: 
+	4
+	soldados jugador 1
+	Soldado01
+	Soldado02
+	Soldado03
+	Soldado04
+	Soldado05
+	Soldados jugador 2
+	Soldado01
+	Soldado02
+	Soldado03
+	Soldado04
+	ganó: Luis
+\end{lstlisting}
+\begin{lstlisting}[language=bash,caption={Commit: Aun puede mejorar usando mejores metodos para comprobar mas cosas del Ejercicio05 pero por ahora cumple la funsion de tener un ganador, ademas estoy confiando en el usuario}][H]
+	- git add .
+	- git commit -m "Aun puede mejorar usando mejores metodos para comprobar mas cosas del Ejercicio05 pero por ahora cumple la funsion de tener un ganador, ademas estoy confiando en el usuario"			
+	- git push -u origin main
+\end{lstlisting}
+
 	
 	\section{\textcolor{red}{Rúbricas}}
 	

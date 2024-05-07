@@ -67,5 +67,5 @@ public class Calculator {
         int b = sc.nextInt();
         System.out.println("El resultado de la operacion es: " + mod(a, b));
     }
-
+    // comentarios para commit
 }

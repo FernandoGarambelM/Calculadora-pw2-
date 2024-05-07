@@ -47,7 +47,7 @@ public class Calculator {
     }
 
     //DIVIDIR
-    public static double dividirNumeros(double dividendo, double divisor) {
+    public double dividirNumeros(double dividendo, double divisor) {
         if (divisor == 0) {
             System.out.println("Error: No se puede dividir por cero.");
             return Double.NaN; // Devuelve NaN (Not a Number) si se intenta dividir por cero

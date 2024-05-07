@@ -9,7 +9,23 @@ class Main {
             opciones();
             System.out.println("\nIngrese su elección: ");
             int seleccion = sc.nextInt();
-            ejecutarSeleccion(seleccion);
+            Calculator calculadora = new Calculator();
+            switch(seleccion) {
+                case 1: calculadora.sumar();
+                    break;
+                case 2: calculadora.restar();
+                    break; 
+                case 3: calculadora.multiplicar();
+                    break;
+                case 4: calculadora.dividirNumeros(seleccion, seleccion);
+                    break;
+                case 5: calculadora.modulo();
+                    break;
+                case 6: menuActivo = false;
+                    break;
+                default: System.out.println("El número igresado es incorrecto");
+                    break;
+            }
         }
     }
 
@@ -23,24 +39,4 @@ class Main {
         "6. SALIR");
     }
 
-    public static void ejecutarSeleccion(int x){
-        Calculator calculadora = new Calculator();
-        switch (x) {
-            case 1: calculadora.sumar();
-                break;
-            case 2: calculadora.restar();
-                break; 
-            case 3: calculadora.multiplicar();
-                break;
-            case 4: 
-                break;
-            case 5: calculadora.modulo();
-                break;
-            case 6: 
-                break;
-            
-            default: System.out.println("El número igresado es incorrecto");
-                break;
-        }
-    }
 }

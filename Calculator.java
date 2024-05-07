@@ -47,13 +47,18 @@ public class Calculator {
     }
 
     //DIVIDIR
-    public double dividirNumeros(double dividendo, double divisor) {
+    public void dividirNumeros() {
+        System.out.println("Ingrese los números: ");
+        double dividendo = sc.nextDouble();
+        double divisor = sc.nextDouble();
+
         if (divisor == 0) {
             System.out.println("Error: No se puede dividir por cero.");
-            return Double.NaN; // Devuelve NaN (Not a Number) si se intenta dividir por cero
         }
-        
-        return dividendo / divisor;
+
+        double respuesta = dividendo / divisor;
+        System.out.println("El resultado es: " + respuesta);
+ 
     }
 
     //MODULO
@@ -61,7 +66,7 @@ public class Calculator {
         int resultado = a % b;
         return resultado; 
     }
-    public void modulo(){
+    public void modulo(){  
         System.out.println("Ingrese los numeros: ");
         int a = sc.nextInt();
         int b = sc.nextInt();

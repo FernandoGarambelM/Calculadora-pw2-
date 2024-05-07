@@ -17,7 +17,7 @@ class Main {
                     break; 
                 case 3: calculadora.multiplicar();
                     break;
-                case 4: calculadora.dividirNumeros(seleccion, seleccion);
+                case 4: calculadora.dividirNumeros();
                     break;
                 case 5: calculadora.modulo();
                     break;

@@ -303,8 +303,29 @@
         System.out.println("El resultado de la suma es: " + resultado + "\n");
     }	
 	\end{lstlisting}
-	\subsection{Método resta}
+	\subsection{Método sub}
+	\begin{lstlisting}[language=bash,caption={Código del método sub}][H]
+		int sub(int a, int b){
+        int resultado = a - b;
+        return resultado; 
+    }	
+	\end{lstlisting}
+	\begin{itemize}
+		\item  Para utilizar este método se creó el método restar que es el que interactua con el usuario
+	\end{itemize}
+	\begin{lstlisting}[language=bash,caption={Código del método restar}][H]
+		public void restar(){
+			System.out.println("Ingrese los dos numeros a restar: ");
+			System.out.print("Numero 1: ");
+			int a = sc.nextInt();
+			System.out.print("Numero 2: ");
+			int b = sc.nextInt();
+			int resultado = sub(a, b);
+			System.out.println("El resultado de la resta es: " + resultado + "\n");
+		}	
+	\end{lstlisting}
 	\subsection{Método multiplicación}
+	
 	\subsection{Método módulo}
 	\subsection{Main}
 

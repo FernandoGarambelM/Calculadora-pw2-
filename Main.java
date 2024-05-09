@@ -27,6 +27,7 @@ class Main {
                     break;
             }
         }
+        sc.close();
     }
 
     public static void opciones(){
